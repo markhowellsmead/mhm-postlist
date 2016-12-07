@@ -43,14 +43,16 @@ class Plugin
                     <time>%2$s</time>
                     %3$s
                 </article>',
-                get_the_title(),
+                $post->post_title,
                 sprintf(
                     __('Published on %1$s', 'mhm_postlist'),
-                    get_the_date()
+                    get_the_date(get_option('date_format'), $post->ID)
                 ),
                 apply_filters('the_content', $post->post_content)
             );
         }
+
+        wp_reset_postdata();
 
         return $html;
     }
