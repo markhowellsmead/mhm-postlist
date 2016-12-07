@@ -18,9 +18,6 @@ class Plugin
         add_shortcode('mhm_postlist', array($this, 'handleShortcode'), 10, 1);
     }
 
-    /**
-     * Load translation files from the indicated directory.
-     */
     public function loadTextDomain()
     {
         load_plugin_textdomain('mhm_postlist', false, dirname(plugin_basename(__FILE__)).'/../Resources/Private/Language');
@@ -28,7 +25,6 @@ class Plugin
 
     public function handleShortcode($atts)
     {
-        // Outputs a list of files in the current DD subfolder
         $this->atts = apply_filters('mhm_postlist/shortcode_atts_list', shortcode_atts(array(), $atts));
 
         $posts = get_posts();

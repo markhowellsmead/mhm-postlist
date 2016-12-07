@@ -4,7 +4,7 @@ Plugin Name: List posts using a shortcode
 Plugin URI: https://github.com/markhowellsmead/mhm-postlist
 Description: Add a shortcode to the page content, to include a simple list of recent blog posts. Posts will be displayed directly.
 Author: Mark Howells-Mead
-Version: 1.0.1
+Version: 1.0.2
 Author URI: https://markweb.ch/
 Text Domain: mhm_postlist
 Domain Path: /Resources/Private/Language
